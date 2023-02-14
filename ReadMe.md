@@ -64,21 +64,21 @@ For Linux
 ```shell
 sudo apt install binaryen
 ```
-For wiindows install options see: https://github.com/WebAssembly/binaryen/releases
+For windows install options see: https://github.com/WebAssembly/binaryen/releases
 
 
 
 #### Deploying to Soroban
 
 - Before we can deploy, we first need to build our contract
-To build run
+- To build, run
 
 ```shell
 cargo build --target wasm32-unknown-unknown --release
 ```
-Once built a wasm file will be genrated in your target/wasm32-unknown-unknown/release/[your project name].wasm
-it contains the contract logic as well as implementations for you to be able to cal it from another contract,
-it is all you need, This is the only artifact needed to deploy the contract.
+Once built a wasm file will be generated in your target/wasm32-unknown-unknown/release/[your project name].wasm
+it contains the contract logic as well as implementations for you to be able to call it from another contract,
+This is all you need. This is the only artifact needed to deploy the contract.
 
 - Next
 - If you have the soroban-cli installed, you can run contracts in a local sandbox environment.
@@ -96,7 +96,7 @@ it should return
 ["Hello","Orokii"]
 ```
 This is because our return type is a vec.
-You can change the Orokii to whatever youlike to see how it hello function returns differently
+You can change the Orokii to whatever you like to see how the hello function returns differently.
 
 #### What's more ---
   - Building optimized contracts is necessary when deploying to a network with fees or when analyzing and profiling a contract to get it as small as possible.
@@ -120,4 +120,4 @@ wasm-opt -Oz \
     -o target/wasm32-unknown-unknown/release/first_project_optimized.wasm
 ```
 
-###### Congratulations you just built and deployed your first Soroban smart contract ⚡🎯🎊
+###### Congratulations, you just built and deployed your first Soroban smart contract ⚡🎯🎊
